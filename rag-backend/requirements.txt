@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pdfplumber
+pymupdf
+langchain-core 
+langchain-community
+langchain-core
+torch
+transformers
+tokenizers
+numpy
+faiss-cpu
+python-multipart
+sentence-transformers

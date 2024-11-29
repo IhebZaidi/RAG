@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./rag-frontend  # Remplacez par le chemin relatif vers votre application Angular
+      dockerfile: Dockerfile  # Le fichier Dockerfile pour le frontend Angular
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./rag-backend  # Remplacez par le chemin relatif vers votre application FastAPI
+      dockerfile: Dockerfile  # Le fichier Dockerfile pour le backend FastAPI
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+    environment:
+      - BACKEND_URL=http://backend:8000
+
+networks:
+  app-network:
+    driver: bridge
