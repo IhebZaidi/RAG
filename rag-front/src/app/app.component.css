@@ -1,0 +1,178 @@
+/* Global Styles */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Conteneur principal */
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding: 25px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Aligne verticalement */
+  margin: 0 auto;
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* En-tête */
+.header {
+  background: linear-gradient(90deg, #d6007f, #05baee);
+  padding: 20px 15px;
+  color: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.main-title {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Section de questions */
+.question-section {
+  margin: 30px 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #2e3b4e;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.question-box {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9fafb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Instructions */
+.instructions {
+  background: #f7f9fc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.instructions-title {
+  font-size: 1.5rem;
+  color: #d6007f;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.instructions-list {
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.instructions-list li {
+  margin: 12px 0;
+  position: relative;
+  padding-left: 30px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.instructions-list li::before {
+  content: '✔';
+  color: #05baee;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 1.2rem;
+}
+
+.instructions-note {
+  margin-top: 15px;
+  color: #555;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Bouton interactif */
+button {
+  background: #05baee;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: #0284c7;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .instructions-title {
+    font-size: 1.3rem;
+  }
+}

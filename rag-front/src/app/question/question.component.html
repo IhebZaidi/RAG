@@ -1,0 +1,53 @@
+<div class="chat-container">
+  <!-- En-tête -->
+  <div class="chat-header">
+    <h2>Chat avec l'IA</h2>
+  </div>
+
+  <!-- Section des messages -->
+  <div class="chat-messages">
+    <div 
+      *ngFor="let message of messages" 
+      class="chat-message" 
+      [ngClass]="{ 'user': message.sender === 'user', 'bot': message.sender === 'bot' }">
+      <p>{{ message.content }}</p>
+    </div>
+  </div>
+
+  <!-- Zone d'entrée et d'actions -->
+  <div class="chat-input-section">
+    <!-- Champ d'entrée utilisateur -->
+    <div class="chat-input">
+      <input
+        type="text"
+        [(ngModel)]="question"
+        placeholder="Posez votre question..."
+        (keyup.enter)="askQuestion()"
+      />
+      <button (click)="askQuestion()">Envoyer</button>
+    </div>
+
+    <!-- Téléchargement de fichier -->
+    <div class="file-upload-section">
+      <label for="file-upload" class="file-upload-label">
+        <i class="fas fa-file-upload"></i> Télécharger un PDF
+      </label>
+      <input 
+        id="file-upload"
+        type="file" 
+        (change)="onFileChange($event)" 
+        accept="application/pdf"
+        class="file-upload-input"
+        hidden
+      />
+      <div *ngIf="file" class="file-preview">
+        <i class="fas fa-file-pdf"></i> {{ file.name }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Chargement -->
+  <div *ngIf="loading" class="loading-spinner">
+    <div class="spinner"></div> Chargement...
+  </div>
+</div>
