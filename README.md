@@ -8,6 +8,8 @@ Le **RAG Project** (Retrieval-Augmented Generation) est une application web qui 
 - **Backend (FastAPI)** : Gère l'upload des fichiers, le traitement des questions, et la génération des réponses à partir des fichiers PDF DOCS.
 - **Frontend (Angular)** : Fournit l'interface utilisateur pour l'interaction avec l'application, permettant de télécharger des fichiers et de poser des questions.
 
+![Image RAG](assets/images/RAG-screenshot.png)
+
 ## Table des Matières
 
 - [Aperçu du Projet](#aperçu-du-projet)
