@@ -163,7 +163,7 @@ networks:
 3. Accédez à l'application :
    - Frontend : [http://localhost](http://localhost)
    - API Backend : [http://localhost:8000/docs](http://localhost:8000/docs)
-![Image frontend](assets/images/compose-screenshot.png)
+![Image docker](assets/images/compose-screenshot.png)
 
 
 ### Arrêter les conteneurs
