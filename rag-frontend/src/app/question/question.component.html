@@ -30,20 +30,23 @@
     <!-- Téléchargement de fichier -->
     <div class="file-upload-section">
       <label for="file-upload" class="file-upload-label">
-        <i class="fas fa-file-upload"></i> Télécharger un PDF
+        <i class="fas fa-file-upload"></i> Télécharger un fichier (PDF ou DOCX)
       </label>
       <input 
         id="file-upload"
         type="file" 
         (change)="onFileChange($event)" 
-        accept="application/pdf"
+        accept=".pdf, .docx, application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         class="file-upload-input"
         hidden
       />
       <div *ngIf="file" class="file-preview">
-        <i class="fas fa-file-pdf"></i> {{ file.name }}
+        <i class="fas fa-file-pdf" *ngIf="file.type === 'application/pdf'"></i>
+        <i class="fas fa-file-word" *ngIf="file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'"></i>
+        {{ file.name }}
       </div>
     </div>
+    
   </div>
 
   <!-- Chargement -->

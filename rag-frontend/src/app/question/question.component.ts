@@ -27,8 +27,9 @@ export class QuestionComponent {
     const input = event.target as HTMLInputElement;
     if (input?.files?.[0]) {
       const file = input.files[0];
-      if (file.type !== 'application/pdf') {
-        alert('Seul un fichier PDF est autorisé.');
+      // Accepter les fichiers PDF et DOCX
+      if (file.type !== 'application/pdf' && file.type !== 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+        alert('Seuls les fichiers PDF et DOCX sont autorisés.');
         this.file = null;
       } else {
         this.file = file;
@@ -37,6 +38,7 @@ export class QuestionComponent {
       }
     }
   }
+  
   
 
   askQuestion(): void {

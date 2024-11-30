@@ -1,5 +1,5 @@
 import logging
-from app.models.bert_model import PhiModelSingleton, TextChunking ,get_answer_from_cv
+from app.models.model import PhiModelSingleton, TextChunking ,get_answer_from_cv
 
 # Initialiser le logger
 logging.basicConfig(
