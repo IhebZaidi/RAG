@@ -90,6 +90,8 @@ Le backend est basé sur **FastAPI**, un framework web Python, qui gère les pri
    ```
 4. Accédez à l'API : [http://localhost:8000/docs](http://localhost:8000/docs)
 
+![Image backend](assets/images/backend-screenshot.png)
+
 ---
 
 ## Frontend
@@ -114,7 +116,7 @@ Le frontend est une application **Angular** qui offre une interface utilisateur 
    ng serve
    ```
 4. Accédez à l'application : [http://localhost:4200](http://localhost:4200)
-
+![Image frontend](assets/images/frontend-screenshot.png)
 ---
 
 ## Docker Compose
@@ -161,6 +163,8 @@ networks:
 3. Accédez à l'application :
    - Frontend : [http://localhost](http://localhost)
    - API Backend : [http://localhost:8000/docs](http://localhost:8000/docs)
+![Image frontend](assets/images/compose-screenshot.png)
+
 
 ### Arrêter les conteneurs
 Pour arrêter et supprimer les conteneurs :
